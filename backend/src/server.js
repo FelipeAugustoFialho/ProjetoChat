@@ -4,7 +4,7 @@ const dotevn = require('dotenv');
 dotevn.config();
 
 
-const wss = new WebSocketServer('wss://projetochat-backend.onrender.com');
+const wss = new WebSocketServer({port:process.env.PORT || 8080});
 
 wss.on("connection", (ws) => {
 
